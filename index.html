@@ -2,81 +2,16 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel = "stylesheet" href = "dropdown.css">
+
+    <script src = "dropdown.js"></script>
   </head>
-  <style>
-/* Center the loader */
-  #loader { 
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  z-index: 1;
-  width: 150px;
-  height: 150px;
-  margin: -75px 0 0 -75px;
-  border: 16px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 16px solid blue;
-  border-bottom: 16px solid blue;
-  width: 120px;
-  height: 120px;
-  -webkit-animation: spin 2s linear infinite;
-  animation: spin 2s linear infinite;
-}
-
-@-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-/* Add animation to "page content" */
-.animate-bottom {
-  position: relative;
-  -webkit-animation-name: animatebottom;
-  -webkit-animation-duration: 1s;
-  animation-name: animatebottom;
-  animation-duration: 1s
-}
-
-@-webkit-keyframes animatebottom {
-  from { bottom:-100px; opacity:0 } 
-  to { bottom:0px; opacity:1 }
-}
-
-@keyframes animatebottom { 
-  from{ bottom:-100px; opacity:0 } 
-  to{ bottom:0; opacity:1 }
-}
-
-#myDiv {
-  display: none;
-  text-align: center;
-}
-</style>
-
-<script>
-var myVar;
-
-function myFunction() {
-  myVar = setTimeout(showPage, 3000);
-}
-
-function showPage() {
-  document.getElementById("loader").style.display = "none";
-  document.getElementById("myDiv").style.display = "block";
-}
-</script>
   <body onload="myFunction()" style="margin:0;">
     <div id="loader"></div>
     <div style = "display:none;" id="myDiv" class = "animate-bottom">
-    <header>
+      <header class = "sticky">
       <div class = "navbar">
         <a href = "https://pi7prateek.github.io"><img src = "https://i.pinimg.com/originals/7a/e6/f7/7ae6f780d31461d2ac7c513b664661e3.jpg" class = "logo"></a>
-        <nav>
+        <nav >
           <ul>
             <li><a href = "https://github.com/pi7prateek/">Github page</a></li>
             <li><a href = "https://create.arduino.cc/projecthub/thegifat">Arduino Page</a></li>
@@ -86,6 +21,12 @@ function showPage() {
       </div>
     </header>
     <img src = "https://images.yourstory.com/cs/wordpress/2018/03/coding-job.png?fm=png&auto=format&ar=2:1&mode=crop&crop=face" class = "image">
+    <div class = "content">
+    <p>
+      Hello guys and welcome to my webpage. This webpage is not only about me but also can guide you along the way.
+      I hope this webpage helps you along the way.
+    </p>
+    </div>
     </div>
   </body>
 </html>
