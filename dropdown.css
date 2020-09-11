@@ -75,6 +75,7 @@ nav a:hover{
   height: 28%;
   float: right;
   margin-left: 10px;
+
 }
 
 #loader {
@@ -149,3 +150,4 @@ nav a:hover{
 .intro{
   text-align: left;
 }
+
