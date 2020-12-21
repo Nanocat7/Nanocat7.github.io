@@ -27,8 +27,7 @@ nav ul{
     margin: 0;
     padding: 0;
     list-style: none;
-    opacity: 0.5;
-    filter: alpha(opacity = 50);
+    opacity: 1;
 }
 
 nav li{
@@ -49,6 +48,7 @@ header::after{
 
 .logo{
     float: left;
+    object-fit: contain; 
 }
 
 nav{
