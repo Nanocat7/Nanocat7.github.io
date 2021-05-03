@@ -1,0 +1,22 @@
+---
+layout: post
+title: "The adventure with Java"
+date: 2021-05-03 10:40:02 +0530
+categories: Java
+---
+
+Java was the first language I learned. It was a comperatively harder language to that of Python. But as you start learning you will get used to it. Everyone starts with this simple code.
+
+{% highlight java %}
+    public class firstProject{
+        public static void main(String[] args){
+            System.out.println("Hello World!");
+        }
+    }
+    // Prints "Hello World!" to output
+{% endhighlight %}
+
+That was the beginning of it. From then it went from Scanner, Integers, Arrays and ArrayLists. I have many projects in java (I haven't posted them on github.). Then next I went to 
+GUI. GUI is very inefficient in java. You have to write about 100 lines of code to make a button or a text box to type. Don't get me wrong, Java is a beautiful language and it is 
+amazing for backend. Many backend programs are still based on java and many languages are still based on java. For example Scala. It is an Object Oriented Programming Language and 
+according to me, I think it is the best language to learn OOPs. For GUI python pyGame and in javascript Electron is the best. It is an amazing language all in all.
