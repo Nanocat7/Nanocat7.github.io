@@ -1,0 +1,81 @@
+---
+layout: post
+title:  "Kylo Bot"
+date:   2021-05-03 09:57:04 +0530
+categories: Python
+---
+
+Kylo Bot was my first bot. It was one of a kind, but in a bad way. It kept giving stack traces and many errors. It was for discord and was written using the discord.py wrapper
+in python. It was written only using if, elif, and else. It was so long that even Visual Studio Code kept reminding me to stop putting more than 50 lines of code in 1 function.
+Here is some part of code.
+
+{% highlight python %}
+  @client.event
+  async def on_message(message):
+    if message.author == client.user:
+        return
+
+
+    if message.content.startswith('happy birthday'):
+        response = "happy birthday!"
+        await message.channel.send(response)
+    
+    elif str.lower(message.content) == "$send":
+        response = ""
+        while response != "$send":
+            response = message.content
+        await message.channel.send(response)
+
+    elif str.lower(message.content) == '$help':
+        e = discord.Embed()
+        e.add_field(name = "Commands that you can execute", value = """here are the commands that you can type they are :
+                    1) Whenever you wish someone happy birthday it will also respond happy birthday
+                    2) Type $help to execute this command which will display the commands that you can execute
+                    3) Type $time to show the current time and date
+                    4) Type $toss to peform the a coin toss
+                    5) Type $date to show current date
+                    6) Type $tell me a joke or $tmj to get a random joke from the internet""" , inline = False)
+        await message.channel.send(embed=e)
+
+    elif str.lower(message.content) == '$toss':
+        response = "Coin tossed"
+        await message.channel.send(response)
+        TossNum = random.randint(0, 1)
+        if TossNum == 0:
+            await message.channel.send("Heads")
+        else :
+            await message.channel.send("Tails")
+  
+  # About 40 lines more in the same function.
+
+{% endhighlight %}
+
+Hence I scraped it as it ended up throwing errors.
+
+If you want to use it for reference here is the [link][KyloBot] for the git repo.
+
+[KyloBot]: https://github.com/NeoDrags/KyloBot
+
+<!-- You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+
+Jekyll requires blog post files to be named according to the following format:
+
+`YEAR-MONTH-DAY-title.MARKUP`
+
+Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `MARKUP` is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+
+Jekyll also offers powerful support for code snippets:
+
+{% highlight ruby %}
+def print_hi(name)
+  puts "Hi, #{name}"
+end
+print_hi('Tom')
+#=> prints 'Hi, Tom' to STDOUT.
+{% endhighlight %}
+
+Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+
+[jekyll-docs]: https://jekyllrb.com/docs/home
+[jekyll-gh]:   https://github.com/jekyll/jekyll
+[jekyll-talk]: https://talk.jekyllrb.com/ -->
