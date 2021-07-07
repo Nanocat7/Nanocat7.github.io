@@ -1,56 +1,84 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you: 
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-
+site: Prateek's Blog
 title: Prateek's Blog
-email: kesavarapu.prateek@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  My name is Prateek and I am an oridnary 14 year old boy. Welcome to my webpage. 
-  I hope you like it and may be informative. I will add a few of my projects and add their links and working.
-  I am working on a game and also am a coder, singer and gamer.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: 
-github_username:  NeoDrags
+description: >-
+  My Blog
+googlewebfonts: Fira+Code:wght@400;500;700
+lang: en-IN
+repo: https://github.com/NeoDrags/NeoDrags.github.io # site repo [optional]
+data-theme: dark # default theme "dark" | "light"
 
-# Build settings
-remote_theme: broccolini/swiss
-theme_color: blue
+author:
+  name: Prateek Kesavarapu
+  bio: He/Him. I am a 14 year old boy who loves coding and is the owner and creator of the Neosh Shell https://git.io/JceN7. I also love playing Minecraft and am very curious for discovering new things.
+  username: NeoDrags # general username
+  github: NeoDrags # github username
+  twitter:  # twitter username
+  email: kesavarapu.prateek@email.com # email adress
+
+# URL settings
+url: "https://neodrags.github.io/" #
+baseurl:  "" #leave blank if not wishd
+permalink: "https://neodrags.github.io/"
+permalink: pretty 
+
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+
+exclude:
+  - .jekyll-cache
+  - .obsidian
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE.md
+  - README.md
+  - CONTRIBUTING.md
+  
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
 plugins:
-  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-relative-links
 
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+collections:
+  pages:
+    output: true
+    permalink: /:name
+  posts:
+    output: true
+    permalink: /:year/:month/:day/:slug
+  
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+relative_links:
+  enabled:     true
+  collections: true
+
+

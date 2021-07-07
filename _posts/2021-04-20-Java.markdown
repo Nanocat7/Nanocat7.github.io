@@ -1,8 +1,9 @@
 ---
 layout: post
 title: "The adventure with Java"
-date: 2021-05-03 10:40:02 +0530
-categories: Java
+date: 2021-04-20 10:40:02 +0530
+summary: My trip with java
+minute: 3
 ---
 
 Java was the first language I learned. It was a comperatively harder language to that of Python. But as you start learning you will get used to it. Everyone starts with this simple code.
